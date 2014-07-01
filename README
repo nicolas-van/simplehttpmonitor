@@ -3,7 +3,9 @@ usage: simplehttpmonitor [-h] [-d STATE_DB] [-e EMAIL] [-s STOP_COMMAND]
                          url
 
 Monitors a web server. This program is meant to be called by cron and will
-send mails to an administrator to report problems.
+send mails to an administrator to report problems. It stores the state of the
+tested web server to only send mails when it switch from down to up and the
+reverse.
 
 positional arguments:
   url                   The url of the web page to test.

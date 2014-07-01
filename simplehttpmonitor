@@ -12,7 +12,8 @@ import subprocess
 import shlex
 
 parser = argparse.ArgumentParser(description='Monitors a web server. This program is meant to be called by cron and ' +
-    "will send mails to an administrator to report problems.")
+    "will send mails to an administrator to report problems. It stores the state of the tested web server to only send mails " +
+    "when it switch from down to up and the reverse.")
 parser.add_argument('url', help='The url of the web page to test.')
 parser.add_argument('-d', '--state-db', help='The file used to store the previous state of the monitored service. Defaults to ./.state-db',
     default=".state-db")
